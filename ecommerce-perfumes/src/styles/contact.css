@@ -1,0 +1,94 @@
+.contact-container {
+  max-width: 600px;
+  margin: 5rem auto 7rem auto;
+  padding: 2.5rem 3rem;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 20px 50px rgba(182, 139, 84, 0.18);
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #b68b54;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  color: #5a5a5a;
+  font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.8rem;
+  border: 2px solid #f0e5cd;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #b68b54;
+  box-shadow: 0 0 8px rgba(182, 139, 84, 0.6);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Contenedor flex para los botones */
+.contact-buttons {
+  display: flex;
+  gap: 2.5rem;               /* espacio entre botones */
+  margin-top: 1.8rem;
+  justify-content: center;   /* centra horizontalmente */
+}
+
+/* Estilos comunes para los botones */
+.contact-buttons button {
+  flex: 1;                   /* mismos anchos para ambos */
+  padding: 1.2rem 0;
+  border-radius: 30px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.4s ease;
+  min-width: 120px;          /* evitar que queden demasiado chicos */
+  width: auto;
+}
+
+/* Botón Enviar */
+.btn-primary {
+  background-color: #b68b54;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #9a6e33;
+}
+
+/* Botón Limpiar */
+.btn-secondary {
+  background-color: #d9c9a0;
+  color: #5c4a23;
+}
+
+.btn-secondary:hover {
+  background-color: #bfa56c;
+}

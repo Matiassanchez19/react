@@ -1,0 +1,45 @@
+.gallery-container {
+  max-width: 1140px;
+  margin: 4rem auto 6rem auto;
+  padding: 0 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.gallery-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #b68b54;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.gallery-container  p{
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #6b6b6b;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(182, 139, 84, 0.12);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 30px 60px rgba(182, 139, 84, 0.25);
+}
