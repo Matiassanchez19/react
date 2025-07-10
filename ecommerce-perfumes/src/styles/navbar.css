@@ -10,14 +10,14 @@
   z-index: 1000;
 }
 
-/* Contenedor de logo + texto */
+
 .navbar-logo-text {
   display: flex;
   align-items: center;
   gap: 0.6rem;
 }
 
-/* LOGO más grande y más pegado a los bordes */
+
 .navbar-logo {
   width: 90px;
   height: 75px;
