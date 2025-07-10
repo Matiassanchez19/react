@@ -26,7 +26,7 @@ function Footer() {
 
         <div className="footer-section contact-info">
           <h4>Contacto</h4>
-          <p>📍 Av. Aromas 123, Buenos Aires, Argentina</p>
+          <p>📍  Buenos Aires, Argentina</p>
           <p>📞 +54 9 11 1234 5678</p>
           <p>✉️ info@fraganciasbr.com</p>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "./Card";
 import "../styles/products.css";
 
@@ -8,32 +8,47 @@ const perfumes = [
   { id: 3, title: "Oud Mood", img: "/imagenes/arabes2.2.jpg", description: "Aromas orientales únicos." },
 ];
 
-function Products() {
-  const [cart, setCart] = useState([]);
-
-  const handleAddToCart = ({ id, title, quantity }) => {
-    setCart(prevCart => {
-      const existing = prevCart.find(item => item.id === id);
-      if (existing) {
-        // Actualizar cantidad
-        return prevCart.map(item => item.id === id ? { ...item, quantity: item.quantity + quantity } : item);
-      } else {
-        // Agregar nuevo producto
-        return [...prevCart, { id, title, quantity }];
-      }
-    });
-    console.log("Carrito:", cart);
+function Products({ cart, onAddToCart, onRemoveFromCart }) {
+  const handleCheckout = () => {
+    alert("¡Gracias por tu compra!");
   };
 
   return (
     <section className="products-container">
       <h2>Nuestros Productos</h2>
+
       <div className="products-grid">
-        {perfumes.map(p => (
-          <Card key={p.id} {...p} onAddToCart={handleAddToCart} />
+        {perfumes.map((perfume) => (
+          <Card key={perfume.id} {...perfume} onAddToCart={onAddToCart} />
         ))}
       </div>
-      {/* Aquí podrías mostrar el carrito si querés */}
+
+      <div className="cart-visual">
+        <h3>Productos seleccionados:</h3>
+        {cart.length === 0 ? (
+          <p className="cart-empty">No seleccionaste ningún producto.</p>
+        ) : (
+          <>
+            <ul className="cart-list">
+              {cart.map((item) => (
+                <li key={item.id}>
+                  {item.title} – Cantidad: {item.quantity}{" "}
+                  <button
+                    className="remove-button"
+                    onClick={() => onRemoveFromCart(item.id)}
+                  >
+                    Eliminar
+                  </button>
+                </li>
+              ))}
+            </ul>
+
+            <button className="checkout-button" onClick={handleCheckout}>
+              Finalizar compra
+            </button>
+          </>
+        )}
+      </div>
     </section>
   );
 }
